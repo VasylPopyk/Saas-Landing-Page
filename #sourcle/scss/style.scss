@@ -1,0 +1,19 @@
+@import "config/mixins";
+@import "config/null";
+@import "config/templates";
+@import "config/variables";
+body{
+    background-color: $darkgrey;
+    .wrapper{
+        @import "header/header";
+        .page{
+            @import "page/banner";
+            @import "page/parthners";
+            @import "page/dashboard";
+            @import "page/features";
+            @import "page/comment";
+            @import "page/questions";
+        }
+        @import "footer/footer";
+    }
+}

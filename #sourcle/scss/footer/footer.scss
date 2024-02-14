@@ -1,0 +1,72 @@
+.footer{
+    .footer_line{
+        margin: 30px 0px;
+        content: "";
+        background-color: $grey;
+        width: 100%;
+        height: 1px;
+    }
+    .footer_container{
+        @include flex(row, center, space-between);
+        .footer_navigation{
+            h1{@include font(28px, 'Arial', 700, none, white); margin: 20px 0px;}
+            nav{
+                @include flex(row, center, center);
+                margin: 20px 0px;
+                .footer_navigation_item{
+                    @include font(18px, 'Arial', 400, none, white);
+                    margin: 0px 10px;
+                }
+            }
+        }
+        .footer_feedback{
+            @include flex(column, flex-start, flex-start);
+            h1{@include font(18px, 'Arial', 400, none, white); margin: 10px 0px;}
+            .footer_feedback_form{
+                @include flex(row, center, center);
+                input{
+                    width: 225px;
+                    height: 45px;
+                    border-radius: 15px;
+                    background-color: rgb(50, 50, 50);
+                    outline: none;
+                    border: none;
+                    @include font(20px, 'Arial', 400, none, white);
+                    padding: 3px 10px;
+                    margin: 5px 10px;
+                }
+                .purple{
+                    background-color: #BFAFF2;
+                    margin: 5px 10px;
+                }
+            }
+        }
+        @media(max-width: 767px){
+            @include flex(column, flex-start, space-between);
+            .footer_navigation{
+                nav{display: none;}
+            }
+            .footer_feedback{
+                width: 100%;
+                .footer_feedback_form{
+                    @include flex(column, center, center);
+                    width :100%;
+                    input{width: 100%;}
+                    button{width :100%;}
+                }
+            }
+            .footer_navigation_mobile{
+                display: none;
+            }
+            .footer_navigation_mobile{
+                @include flex(column, flex-start, center);
+                margin: 20px 0px;
+                width: 100%;
+                .footer_navigation_item{
+                    @include font(18px, 'Arial', 400, none, white);
+                    margin: 20px 10px;
+                }
+            }
+        }
+    }
+}

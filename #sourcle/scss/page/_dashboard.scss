@@ -1,0 +1,13 @@
+.dashboard{
+    margin: 50px auto;
+    .dashboard_content{
+        width: 100%;
+        background-color: wheat;
+        border-radius: 10px;
+        @include flex(row, center, center);
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

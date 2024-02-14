@@ -1,0 +1,29 @@
+.header{
+    @include position(absolute, 0, 0, 100%, auto, 50);
+    .header_container{
+        padding: 20px 0px;
+        .header_logo{
+            margin: 10px;
+            a{@include font(28px, 'Arial', 700, none, white)}
+        }
+        .header_menu{
+            @include flex(row, center, center);
+            .header_menu_item{
+                margin: 0px 5px;
+                a{@include font(18px, 'Arial', 300, none, white)}
+                &.login{
+                    padding: 5px 50px;
+                    background-color: #BFAFF2;
+                    height: 40px;
+                    @include flex(row, center, center);
+                    border-radius: 10px;
+                    cursor: pointer;
+                    a{@include font(18px, 'Arial', 300, none, $dark)}
+                }
+            }
+            @media(max-width: 767px){
+                display: none;
+            }
+        }
+    }
+}

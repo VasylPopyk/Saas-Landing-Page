@@ -1,0 +1,37 @@
+.banner{
+    @include flex(row, center, center);
+    margin: 100px auto;
+    .banner_content{
+        .banner_text{
+            @include flex(column, flex-start, flex-start);
+            h1{@include font(52px, 'Arial', 600, none, white); margin: 40px 0px;}
+            p{@include font(18px, 'Arial', 300, none, $grey); margin: 10px 0px;}
+            .get_started{
+                @include font(18px, 'Arial', 300, none, $dark);
+                @include flex(column, center, center);
+                margin: 30px 0px;
+                width: 200px;
+                height: 45px;
+                padding: 10px 30px;
+                border-radius: 15px;
+                background-color: #F8D57E;
+                cursor: pointer;
+            }
+        }
+    }
+    .banner_image{
+        width: 680px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media(max-width: 767px){
+        flex-wrap: wrap;
+        .banner_content{
+            .banner_text{
+                @include flex(column, center, center);
+            }
+        }
+    }
+}

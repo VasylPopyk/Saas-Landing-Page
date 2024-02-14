@@ -1,0 +1,20 @@
+.features{
+    .features_content{
+        width: 100%;
+        @include flex(row, center, center);
+        .features_content_item{
+            width: 310px;
+            @include flex(column, center, center);
+            img{
+                width: 70px;
+                height: 70px;
+                margin-bottom: 30px;
+            }
+            h3{@include font(18px, 'Arial', 500, none, white); margin: 5px; text-align: center}
+            p{@include font(16px, 'Arial', 300, none, $grey); margin: 5px; text-align: center;}
+        }
+        @media(max-width: 767px){
+            flex-wrap: wrap;
+        }
+    }
+}
