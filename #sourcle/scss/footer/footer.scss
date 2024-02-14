@@ -41,6 +41,9 @@
                 }
             }
         }
+        .footer_navigation_mobile{
+            display: none;
+        }
         @media(max-width: 767px){
             @include flex(column, flex-start, space-between);
             .footer_navigation{
@@ -56,15 +59,14 @@
                 }
             }
             .footer_navigation_mobile{
-                display: none;
-            }
-            .footer_navigation_mobile{
-                @include flex(column, flex-start, center);
-                margin: 20px 0px;
-                width: 100%;
-                .footer_navigation_item{
-                    @include font(18px, 'Arial', 400, none, white);
-                    margin: 20px 10px;
+                h1{@include font(28px, 'Arial', 700, none, white); margin: 20px 0px;}
+                nav{
+                    @include flex(row, center, center);
+                    margin: 20px 0px;
+                    .footer_navigation_item{
+                        @include font(18px, 'Arial', 400, none, white);
+                        margin: 0px 10px;
+                    }
                 }
             }
         }
